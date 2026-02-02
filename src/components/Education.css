@@ -1,0 +1,133 @@
+.education-section {
+    min-height: 80vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--bg-color);
+    /* Slightly cleaner BG for text heavy section */
+    display: flex;
+    justify-content: center;
+}
+
+.education-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.education-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    /* Center the container of the title */
+    padding-left: 0;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    /* Space for the line */
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center the timeline block */
+}
+
+.timeline-line {
+    position: absolute;
+    left: 23px;
+    /* Center of the dot */
+    top: 10px;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--card-border);
+    opacity: 0.5;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    /* Space from line to content */
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg-color);
+    /* Create spacing from line */
+}
+
+/* Content */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.degree {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.institution {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.separator {
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education-header {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-line {
+        left: 19px;
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .degree {
+        font-size: 1.2rem;
+    }
+
+    .meta-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .separator {
+        display: none;
+    }
+}

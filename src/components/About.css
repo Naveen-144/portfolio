@@ -1,0 +1,43 @@
+.about-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--bg-secondary);
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Local section-title removed to use global one */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.about-content p:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+    }
+}

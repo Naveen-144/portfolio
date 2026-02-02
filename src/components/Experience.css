@@ -1,0 +1,147 @@
+.experience-section {
+    min-height: 50vh;
+    /* Shorter section */
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--bg-secondary);
+    /* Alternating background */
+    display: flex;
+    justify-content: center;
+}
+
+.experience-container {
+    max-width: 1200px;
+    /* Standardized width */
+    width: 100%;
+}
+
+.experience-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    padding-left: 0;
+    /* Removed indent */
+}
+
+/* Reusing timeline core logic but specific classes to avoid conflicts if edited separately */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center the timeline block */
+}
+
+.timeline-line {
+    position: absolute;
+    left: 23px;
+    top: 10px;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--card-border);
+    opacity: 0.5;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg-secondary);
+    /* Match context bg */
+}
+
+/* Content */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.company {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.role-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.separator {
+    opacity: 0.5;
+}
+
+.description-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.description-list li {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.6;
+    opacity: 0.9;
+    position: relative;
+    padding-left: 16px;
+}
+
+.description-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experience-header {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-line {
+        left: 19px;
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .timeline-dot {
+        box-shadow: 0 0 0 4px var(--bg-secondary);
+    }
+
+    .company {
+        font-size: 1.2rem;
+    }
+
+    .role-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .separator {
+        display: none;
+    }
+}

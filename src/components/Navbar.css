@@ -1,0 +1,161 @@
+/* Navbar Base Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    letter-spacing: -0.05em;
+    z-index: 1001;
+    /* Above mobile menu */
+}
+
+/* Desktop Links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-links button {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+}
+
+.navbar-links button:hover {
+    color: var(--text-primary);
+}
+
+.resume-link {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    /* Matched to other links */
+    font-weight: 500;
+    /* Matched to other links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.resume-link:hover {
+    color: var(--text-primary);
+    /* Matched hover effect */
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    transform: translateY(-8px) rotate(-45deg);
+    /* Adjusted logic, often 3 bars, here 2 is enough for minimal */
+    /* Wait, usually 3 bars. Let's make it 2 bars like Apple often does in minimal toggle or the cross animation needs adjustment */
+    /* Two bars usually transform to X */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu button,
+.mobile-resume-link {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}

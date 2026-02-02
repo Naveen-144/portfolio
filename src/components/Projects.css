@@ -1,0 +1,226 @@
+/* Projects Section */
+.projects-section {
+    min-height: 100vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--bg-color);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Local section-title removed */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Card Styling */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft, premium shadow */
+    transition: box-shadow 0.3s ease;
+    border: 1px solid var(--card-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image-container img {
+    transform: scale(1.05);
+    /* Subtle zoom on hover */
+}
+
+.card-content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    /* Muted text */
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.card-short-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Modal / Detailed View Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dimmed background */
+    backdrop-filter: blur(10px);
+    /* Apple-style blur */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.project-modal {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 24px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-image-container {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    background: var(--bg-secondary);
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.close-button:hover {
+    transform: scale(1.1);
+}
+
+.modal-content {
+    padding: var(--spacing-lg) var(--spacing-lg);
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    margin-top: var(--spacing-md);
+}
+
+.full-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.highlights-section {
+    background: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: 16px;
+}
+
+.highlights-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.highlights-section ul {
+    list-style-type: none;
+    /* Custom bullet points */
+    padding-left: 0;
+}
+
+.highlights-section ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.highlights-section ul li::before {
+    content: '•';
+    color: var(--text-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .modal-image-container {
+        height: 250px;
+    }
+
+    .modal-content {
+        padding: var(--spacing-md);
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+}

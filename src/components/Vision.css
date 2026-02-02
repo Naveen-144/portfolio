@@ -1,0 +1,26 @@
+.vision-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: var(--bg-secondary);
+}
+
+.vision-content {
+    max-width: 1200px;
+    text-align: center;
+    /* Revert to center for Vision as it looks best */
+}
+
+.vision-content .section-title {
+    /* Inherits global padding/margin if any, or just uses the class */
+    margin-bottom: var(--spacing-md);
+}
+
+.vision-content p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-weight: 300;
+}

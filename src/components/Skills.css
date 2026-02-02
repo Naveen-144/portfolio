@@ -1,0 +1,60 @@
+.skills-section {
+    min-height: 60vh;
+    /* Reduced height as it's cleaner now */
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+.skills-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* Balanced spacing */
+    justify-content: center;
+    /* Center align for better balance with centered header */
+}
+
+.skill-tag {
+    font-size: 1.1rem;
+    /* Slightly larger, readable text */
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Glass-like feel */
+    color: var(--text-primary);
+    border-radius: 100px;
+    /* Pill shape */
+    border: 1px solid var(--card-border);
+    cursor: default;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .skill-tag {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+
+    .skills-flow {
+        gap: 10px;
+        justify-content: center;
+        /* Center align on mobile looks better usually */
+    }
+}
