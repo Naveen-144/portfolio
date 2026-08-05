@@ -1,16 +1,74 @@
-# React + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website.
 
-Currently, two official plugins are available:
+This portfolio showcases my work in **React Development** and **VLSI Design**, including projects, technical skills, and professional experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌍 https://naveenkumar-two.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive Design
+- Modern UI
+- About Me
+- Skills
+- Projects
+- Resume Download
+- Contact Section
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- JavaScript
+- HTML
+- CSS
+- Tailwind CSS
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+public/
+assets/
+components/
+```
+
+---
+
+## 🎯 Future Improvements
+
+- Dark Mode
+- Blog Section
+- Project Filtering
+- Animations
+- VLSI Project Showcase
+
+---
+
+## 👨‍💻 Author
+
+**Naveen Kumar R**
+
+Aspiring VLSI Engineer & React Developer
+
+---
+
+## 📬 Contact
+
+GitHub: https://github.com/Naveen-144
+
+LinkedIn: (Add your LinkedIn)
+
+Portfolio:
+https://naveenkumar-two.vercel.app/
