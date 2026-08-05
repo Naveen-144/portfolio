@@ -68,7 +68,7 @@ Aspiring VLSI Engineer & React Developer
 
 GitHub: https://github.com/Naveen-144
 
-LinkedIn: (Add your LinkedIn)
+LinkedIn: https://www.linkedin.com/in/naveen-kumar-r-768384272/
 
 Portfolio:
 https://naveenkumar-two.vercel.app/
