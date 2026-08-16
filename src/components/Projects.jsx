@@ -28,7 +28,7 @@ const projects = [
             '44.70% reduction in delay',
             'Proposed SK-LCT combines Sleepy Keeper and LECTOR techniques for leakage reduction and data retention',
             'Comparative analysis with Sleep, Stack, Sleepy Stack, Sleepy Keeper, and LECTOR techniques',
-            'Designed and analysed using Tanner EDA / T-Spice simulation'
+            'Designed and analysed using Cadence Virtuoso'
         ],
         image: sramImg
     },
